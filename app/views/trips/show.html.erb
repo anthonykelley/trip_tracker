@@ -13,4 +13,4 @@
   </p>
 <%= link_to 'Edit Trip', edit_trip_path(@trip) %>
 <%= link_to 'Delete', trip_path(@trip), method: :delete, data: {confirm: 'Are you sure you would like to delete?'} %>
-<%= link_to 'Plan Location', trip_location_index_path(@location) %>
+<%= link_to 'Plan Location', trip_locations_path(@trip) %>

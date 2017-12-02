@@ -1,5 +1,5 @@
 class LocationsController < ApplicationController
-  before_action :find_artist
+  before_action :find_trip
 
   def index
     @locations = @trip.locations.all
@@ -37,11 +37,11 @@ class LocationsController < ApplicationController
   end
 
   private
-    def find_artist
+    def find_trip
       @trip = Trip.find(params[:trip_id])
     end
 
     def location_params
-      params.require(:location).permit(:address, :priority)
+      params.require(:location).permit(:address, :priority, :name, :country)
     end
 end
