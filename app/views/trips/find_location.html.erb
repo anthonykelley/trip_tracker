@@ -2,8 +2,11 @@
 <div class="ui container">
     <div class"ui grid">
       <h1>Pick your location</h1>
-      <%= link_to "New location", new_location_path(@location) %>
-      <%= link_to "Back to Trips", trips_path %>
+      <div class="ui two buttons">
+        <%= link_to "Back to Trips", trips_path, class: 'ui basic green button' %>
+        <%= link_to "Create New location", new_location_path(@location), class: 'ui basic blue button' %>
+
+      </div>
 
       <div class "sixteen wide computer column">
         <div class="ui cards">
@@ -27,6 +30,7 @@
               </div>
             </div>
             <div class="extra content">
+              <%= link_to 'Add This Location', add_location_path(@trip, local), method: :patch, class: "ui basic green button" %>
             </div>
           </div>
           <% end %>

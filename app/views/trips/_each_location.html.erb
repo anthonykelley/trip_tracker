@@ -1,13 +1,10 @@
-
 <div class="ui container">
     <div class"ui grid">
       <h1>Pick your location</h1>
-      <%= link_to "New location", new_location_path(@location) %>
-      <%= link_to "Back to Trips", trips_path %>
 
       <div class "sixteen wide computer column">
         <div class="ui cards">
-          <% @locations.each do |local| %>
+          <% @trip.locations.each do |local| %>
 
 
           <div class="card">
@@ -27,6 +24,7 @@
               </div>
             </div>
             <div class="extra content">
+              <%= link_to 'Remove This location', remove_location_path(@trip, local), method: :patch, class: "ui basic orange button" %>
             </div>
           </div>
           <% end %>

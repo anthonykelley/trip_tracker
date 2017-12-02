@@ -1,5 +1,6 @@
 class TripsController < ApplicationController
-  before_action :set_trip, only: [:show, :edit, :update, :destroy]  
+  before_action :set_trip, only: [:show, :edit, :update, :destroy,
+                                  :find_location, :add_location, :remove_from_trip]
 
   def index
     @trip = current_user.trips
@@ -30,12 +31,30 @@ class TripsController < ApplicationController
       redirect_to trip_path(@trip)
     else
       render :edit
-    end    
+    end
   end
 
   def destroy
     current_user.trips.find(params[:id]).destroy
     redirect_to trips_path
+  end
+
+  #custom controllers for adding locations
+
+  def find_location
+    @locations = Location.where('trip_id IS ?', nil)
+  end
+
+  def add_location
+    @location = Location.find(params[:format])
+    @location.update(trip_id: params[:id])
+    redirect_to trip_path(@trip)
+  end
+
+  def remove_from_trip
+    @location = Location.find(params[:trip_id])
+    @location.update(trip_id: nil)
+    redirect_to trip_path(@trip)
   end
 
   private
