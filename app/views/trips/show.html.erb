@@ -1,2 +1,16 @@
-<h1>Trips#show</h1>
-<p>Find me in app/views/trips/show.html.erb</p>
+<h1><%= @trip.name %> Trip</h1>
+  <p>
+    <strong>Name:</strong>
+    <%= @trip.name %>
+  </p>
+  <p>
+    <strong>Days:</strong>
+    <%= @trip.days %>
+  </p>
+  <p>
+    <strong>Season:</strong>
+    <%= @trip.season %>
+  </p>
+<%= link_to 'Edit Trip', edit_trip_path(@trip) %>
+<%= link_to 'Delete', trip_path(@trip), method: :delete, data: {confirm: 'Are you sure you would like to delete?'} %>
+<%= link_to 'Plan Location', trip_location_index_path(@location) %>
