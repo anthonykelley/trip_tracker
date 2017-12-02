@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'static_pages/new'
+
   root 'trips#index'
 
   devise_for :users

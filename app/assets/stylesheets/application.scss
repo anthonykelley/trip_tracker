@@ -1,6 +1,74 @@
 @import 'semantic-ui';
 @import 'animate';
+@import 'locations';
 
-.container{
-  padding-top: 50px;
+.menu{
+  margin-bottom: 50px;
+}
+
+.image{
+  background: url('landing_img.jpg')center center;
+  background-size: cover;
+  max-height: 100%;
+  height: 800px;
+  max-width: auto;
+  width: auto;
+}
+
+.landing-banner{
+  height: 80%;
+}
+
+.landing-div{
+  max-height: 60%;
+  height: 60vh;
+  margin: 0 auto;
+}
+
+#login-form{
+  height: 250px;
+  width: auto;
+}
+
+.land-footer{
+  background-color: lightblue;
+  height: 400px;
+}
+
+.ui.grid > .column:not(.row){
+  padding: 0;
+  margin: 0;
+}
+
+#landing-title{
+  padding-top: 75px;
+  text-align: center;
+  color: white;
+  h1{
+    font-size: 75px;
+    text-shadow: 1px 1px 1px;
+
+  }
+}
+
+#landing-button{
+  padding-top: 41px;
+
+}
+
+#landing-form{
+  label{
+    color: white;
+    font-size: 18px;
+
+  }
+}
+.bottom{
+}
+
+#page-footer{
+  background-color: lightblue;
+  p{
+    padding: 0 25;
+  }
 }
