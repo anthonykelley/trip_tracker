@@ -7,10 +7,10 @@
 }
 
 .image{
-  background: url('landing_img.jpg')center center;
+  background: url('landing_image.jpg')center center;
   background-size: cover;
   max-height: 100%;
-  height: 800px;
+  height: 100vh;
   max-width: auto;
   width: auto;
 }
@@ -60,15 +60,34 @@
   label{
     color: white;
     font-size: 18px;
-
   }
 }
-.bottom{
-}
 
-#page-footer{
-  background-color: lightblue;
+#page-footer.menu{
+  background-color: lightblue !important;
   p{
     padding: 0 25;
+  }
+}
+.ui.menu {
+  background: #383838;
+  .item{
+    color:white;
+  }
+}
+
+#login-land{
+  width: 250px;
+  h2{
+    color: white;
+  }
+}
+
+.flex-wrapper{
+  display: flex;
+  justify-content: space-between;
+  p{
+    display: flex;
+    justify-content: space-between;
   }
 }
