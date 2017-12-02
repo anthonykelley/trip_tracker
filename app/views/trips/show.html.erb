@@ -1,18 +1,20 @@
-<h1><%= @trip.name %> Trip</h1>
-  <p>
-    <strong>Name:</strong>
-    <%= @trip.name %>
-  </p>
-  <p>
-    <strong>Days:</strong>
-    <%= @trip.days %>
-  </p>
-  <p>
-    <strong>Season:</strong>
-    <%= @trip.season %>
-  </p>
-<%= link_to 'Edit Trip', edit_trip_path(@trip) %>
-<br />
-<%= link_to 'Delete', trip_path(@trip), method: :delete, data: {confirm: 'Are you sure you would like to delete?'} %>
-<br />
-<%= link_to 'Plan Location', trip_locations_path(@trip) %>
+ <div class='ui container'> 
+  <h1><%= @trip.name %> Trip</h1>
+    <p>
+      <strong>Name:</strong>
+      <%= @trip.name %>
+    </p>
+    <p>
+      <strong>Days:</strong>
+      <%= @trip.days %>
+    </p>
+    <p>
+      <strong>Season:</strong>
+      <%= @trip.season %>
+    </p>
+  <%= link_to 'Edit Trip', edit_trip_path(@trip) %>
+  <br />
+  <%= link_to 'Delete', trip_path(@trip), method: :delete, data: {confirm: 'Are you sure you would like to delete?'} %>
+  <br />
+  <%= link_to 'Plan Location', trip_locations_path(@trip) %>
+</div>

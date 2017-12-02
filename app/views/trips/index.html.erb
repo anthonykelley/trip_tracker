@@ -1,12 +1,14 @@
-<h1>Your Trips</h1>
-<% if @trip.any? %>
-  <% @trip.each do |trip| %>
-    <h3>
-      <%= link_to trip.name, trip_path(trip) %>
-    </h3>
+<div class='ui container'>
+  <h1>Your Trips</h1>
+  <% if @trip.any? %>
+    <% @trip.each do |trip| %>
+      <h3>
+        <%= link_to trip.name, trip_path(trip) %>
+      </h3>
+    <% end %>
+  <% else %>
+    <h4> No Trips Planned</h4>
   <% end %>
-<% else %>
-  <h4> No Trips Planned</h4>
-<% end %>
 
-<%= link_to 'Add New Trip', new_trip_path %>
+  <%= link_to 'Add New Trip', new_trip_path %>
+</div>
