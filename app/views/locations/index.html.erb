@@ -2,6 +2,7 @@
 <div class="ui container">
     <div class"ui grid">
       <h1>Pick your location</h1>
+      <%= link_to "New location", new_trip_location_path(@trip) %>
 
       <div class "sixteen wide computer column">
         <div class="ui cards">
@@ -31,6 +32,5 @@
           <% end %>
         </div>
       </div>
-      <%= link_to "New location", new_trip_location_path(@trip) %>
     </div>
   </div>
