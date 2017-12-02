@@ -1,5 +1,5 @@
 class LocationsController < ApplicationController
-  before_action :set_location, only: [:show, :edit, :update]
+  before_action :find_artist
 
   def index
     @locations = current_user.locations
@@ -16,9 +16,9 @@ class LocationsController < ApplicationController
   end
 
   def create
-    @location = current_user.locations.new(account_params)
+    @location = @trip.location.new(location_params)
     if @location.save
-      redirect_to locations_path
+      redirect_to trip_path(@trip)
     else
       render :new
     end
@@ -37,11 +37,11 @@ class LocationsController < ApplicationController
   end
 
   private
-    def set_account
-      @location = current_user.locations.find(params[:id])
+    def find_artist
+      @trip = Trip.find(params[:trip_id])
     end
 
-    def account_params
-      params.require(:location).permit(:name, :trip)
+    def location_params
+      params.require(:location).permit(:address, :priority)
     end
 end

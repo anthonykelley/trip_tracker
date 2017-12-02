@@ -16,6 +16,8 @@ ActiveRecord::Schema.define(version: 20171201215412) do
   enable_extension "plpgsql"
 
   create_table "locations", force: :cascade do |t|
+    t.string "country", null: false
+    t.string "name", null: false
     t.string "address", null: false
     t.integer "priority", null: false
     t.bigint "trip_id"
