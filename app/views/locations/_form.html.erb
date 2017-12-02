@@ -1,0 +1,28 @@
+<div class="ui container">
+
+  <%= form_for @location, class: "ui form" do |f| %>
+
+  <div class'field'>
+    <%= f.label :name %>
+    <%= f.text_field :name, required: true, autofocus: true %>
+  </div>
+
+  <div class'field'>
+    <%= f.label :country %>
+    <%= f.text_field :country, required: true%>
+  </div>
+
+  <div class'field'>
+    <%= f.label :address %>
+    <%= f.text_field :address, required: true%>
+  </div>
+
+  <div class'field'>
+    <%= f.label :priority %>
+    <%= f.number_field :priority, required: true%>
+  </div>
+
+  <%= f.submit class: "ui blue button" %>
+
+  <% end %>
+</div>

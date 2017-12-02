@@ -1,8 +1,9 @@
 class LocationsController < ApplicationController
-  before_action :find_trip
+  # before_action :find_trip
+  before_action :find_location, only: [:edit, :show, :update, :destroy ]
 
   def index
-    @locations = @trip.locations.all
+    @locations = Location.all
   end
 
   def show
@@ -16,15 +17,15 @@ class LocationsController < ApplicationController
   end
 
   def create
-    @location = @trip.locations.new(location_params)
+    @location = Location.new(location_params)
     if @location.save
-      redirect_to trip_path(@trip)
+      redirect_to locations_path
     else
       render :new
     end
   end
 
-  def udpate
+  def update
     if @location.update(location_params)
       redirect_to locations_path
     else
@@ -34,11 +35,16 @@ class LocationsController < ApplicationController
 
   def destroy
     @location.destroy
+    redirect_to locations_path
   end
 
   private
-    def find_trip
-      @trip = Trip.find(params[:trip_id])
+    # def find_trip
+    #   @trip = Trip.find(params[:trip_id])
+    # end
+
+    def find_location
+      @location = Location.find(params[:id])
     end
 
     def location_params

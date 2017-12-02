@@ -2,17 +2,18 @@
 <div class="ui container">
     <div class"ui grid">
       <h1>Pick your location</h1>
-      <%= link_to "New location", new_trip_location_path(@trip) %>
+      <%= link_to "New location", new_location_path(@location) %>
+      <%= link_to "Back to Trips", location_path(@location) %>
 
       <div class "sixteen wide computer column">
         <div class="ui cards">
-          <% @trip.locations.each do |local| %>
+          <% @locations.each do |local| %>
 
 
           <div class="card">
             <div class="content">
               <div class="header">
-                <%= local.name %>
+                <%=link_to local.name, location_path(local) %>
               </div>
 
               <div class="description">

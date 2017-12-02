@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 
   devise_for :users
 
-  resources :trips do
-    resources :locations
-  end
+  resources :trips
+  resources :locations
+  # get '/trips/:id/locations', to: 'locations#index', as: 'location_index'
 end

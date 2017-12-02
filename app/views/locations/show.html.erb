@@ -1,2 +1,13 @@
-<h1>Locations#show</h1>
-<p>Find me in app/views/locations/show.html.erb</p>
+<div class="ui container">
+  <h1><%= @location.name %></h1>
+
+  <p>Country: <%= @location.country %></p>
+  <p>Address: <%= @location.address %></p>
+  <p>Priority: <%= @location.priority%></p>
+
+  <%= link_to "Back to All locations", locations_path(@location), class: "ui blue button" %>
+  <%= link_to "Edit", edit_location_path(@location), class: "ui orange button" %>
+  <%= link_to "Remove", location_path(@location),
+                        method: :delete, data: {confirm: 'Are you sure?'},
+                        class: "ui red button" %>
+</div>
