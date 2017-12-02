@@ -1,2 +1,35 @@
-<h1>Locations#index</h1>
-<p>Find me in app/views/locations/index.html.erb</p>
+
+<div class="ui container">
+    <div class"ui grid">
+      <h1>Pick your location</h1>
+
+      <div class "sixteen wide computer column">
+        <div class="ui cards">
+          <%= @trip.locations.each do |local| %>
+
+
+          <div class="card">
+            <div class="content">
+              <div class="header">
+                <%= local.name %>
+              </div>
+
+              <div class="description">
+                <%= local.country %>
+              </div>
+              <div class="description">
+                <%= local.address %>
+              </div>
+              <div class="description">
+                <%= local.rank %>
+              </div>
+            </div>
+            <div class="extra content">
+              <%= link_to 'Remove From List', remove_song_path(@billboard, song), method: :patch, class: "ui orange button"  %>
+            </div>
+          </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>

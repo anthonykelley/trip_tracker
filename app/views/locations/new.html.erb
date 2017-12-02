@@ -1,2 +1,27 @@
-<h1>Locations#new</h1>
-<p>Find me in app/views/locations/new.html.erb</p>
+<h1>Create a new location</h1>
+
+<%= form_for [@trip, @location], class: "ui form" do |f| %>
+
+  <div class'field'>
+    <%= f.label :name %>
+    <%= f.text_field :name, required: true, autofocus: true %>
+  </div>
+
+  <div class'field'>
+    <%= f.label :country %>
+    <%= f.text_field :country, required: true%>
+  </div>
+
+  <div class'field'>
+    <%= f.label :address %>
+    <%= f.text_field :address, required: true%>
+  </div>
+
+  <div class'field'>
+    <%= f.label :rank %>
+    <%= f.number_field :rank, required: true%>
+  </div>
+
+  <%= f.submit class: "ui blue button" %>
+
+<% end %>

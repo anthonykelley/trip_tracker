@@ -2,7 +2,7 @@ class LocationsController < ApplicationController
   before_action :find_artist
 
   def index
-    @locations = current_user.locations
+    @locations = @trip.locations.all
   end
 
   def show
@@ -16,7 +16,7 @@ class LocationsController < ApplicationController
   end
 
   def create
-    @location = @trip.location.new(location_params)
+    @location = @trip.locations.new(location_params)
     if @location.save
       redirect_to trip_path(@trip)
     else
