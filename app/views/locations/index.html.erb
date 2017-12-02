@@ -5,7 +5,7 @@
 
       <div class "sixteen wide computer column">
         <div class="ui cards">
-          <%= @trip.locations.each do |local| %>
+          <% @trip.locations.each do |local| %>
 
 
           <div class="card">
@@ -21,15 +21,16 @@
                 <%= local.address %>
               </div>
               <div class="description">
-                <%= local.rank %>
+                <%= local.priority %>
               </div>
             </div>
             <div class="extra content">
-              <%= link_to 'Remove From List', remove_song_path(@billboard, song), method: :patch, class: "ui orange button"  %>
+              Add option to add to trip
             </div>
           </div>
           <% end %>
         </div>
       </div>
+      <%= link_to "New location", new_trip_location_path(@trip) %>
     </div>
   </div>
