@@ -1,14 +1,54 @@
-<div class='ui container'>
-  <h1>Your Trips</h1>
-  <% if @trip.any? %>
-    <% @trip.each do |trip| %>
-      <h3>
-        <%= link_to trip.name, trip_path(trip) %>
-      </h3>
-    <% end %>
-  <% else %>
-    <h4> No Trips Planned</h4>
-  <% end %>
 
-  <%= link_to 'Add New Trip', new_trip_path %>
+
+
+<div id="trip-show">
+  <div class="ui two column centered grid">
+    <div class="column">
+
+      <div id="trip-show">
+        <h1><%= current_user.first_name%>'s Trips</h1>
+
+        <div id="trip-buttons">
+
+          <%= link_to 'Add New Trip', new_trip_path, class: 'ui blue button' %>
+          <%= link_to 'View All locations', locations_path, class: 'ui green button' %>
+
+        </div>
+      </div>
+
+      <div class='ui container'>
+
+
+
+        <% if @trip.any? %>
+        <% @trip.each do |trip| %>
+        <div class="ui card">
+          <div class="content">
+            <div class="right floated meta"><%= trip.days %></div>
+            <%= link_to trip.name, trip_path(trip) %>
+          </div>
+          <div class="image">
+            <img>
+          </div>
+          <div class="content">
+            <span class="right floated">
+              <i class="heart outline like icon"></i>
+              17 likes
+            </span>
+            <i class="remove from calendar icon"></i>
+            <%= trip.season %>
+          </div>
+        </div>
+        <% end %>
+        <% else %>
+        <h4>Create a trip!</h4>
+        <% end %>
+
+
+      </div>
+
+    </div>
+
+  </div>
+
 </div>
