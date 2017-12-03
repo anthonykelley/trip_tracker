@@ -1,28 +1,32 @@
-<div class='ui container flex-wrapper'>
-  <p>
-    <strong>Your trip</strong>
-    <p id="trip-name">
-      <%= @trip.name %>
+  <div class="eight wide column">
+    <p>
+      <strong>Your trip</strong>
+      <p id="trip-name">
+        <%= @trip.name %>
 
+      </p>
     </p>
-  </p>
-  <p>
-    <strong>Duration:</strong>
-    <%= @trip.days %> Days
-  </p>
-  <p>
-    <strong>Season:</strong>
-    <%= @trip.season %>
-  </p>
+    <p>
+      <strong>Duration:</strong>
+      <%= @trip.days %> Days
+    </p>
+    <p>
+      <strong>Season:</strong>
+      <%= @trip.season %>
+    </p>
 
-  <div class="trip-buttons">
-    <%= link_to 'Edit Trip', edit_trip_path(@trip), class: "ui orange button" %>
-    <%= link_to 'Delete', trip_path(@trip), method: :delete,
-    data: {confirm: 'Are you sure you would like to delete?'},
-    class: "ui red button" %>
+    <div class="trip-buttons">
+      <%= link_to 'Edit Trip', edit_trip_path(@trip), class: "ui orange button" %>
+      <%= link_to 'Delete', trip_path(@trip), method: :delete,
+      data: {confirm: 'Are you sure you would like to delete?'},
+      class: "ui red button" %>
+
+    </div>
 
   </div>
-  <br />
-
-
-</div>
+  <div id="description-trip" class="eight wide column ">
+    <strong>Description:</strong>
+    <p>
+      sbadkljhbaskl djsagdkhs gdh aghdf lksa gfl sgdf l lkasdg fhjgd fga  fkg alwugf keg fdj faugf .sdjg fjsd fkgkj dkj ga;g fa;
+    </p>
+  </div>

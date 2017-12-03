@@ -60,13 +60,17 @@
   }
 }
 
-.flex-wrapper{
+#flex-wrapper2{
   font-size: 17px;
   height: 250px;
   display: flex;
-  padding: 5%;
-  background: rgba(220,220,230, 0.5);
+  padding: 2%;
+  background: rgba(85,130,139, 0.2);
   border-radius: 15px;
+  #description-trip{
+    padding-left: 15px;
+    border-left: 2px solid black;
+  }
   #trip-name{
     font-size: 22px;
     padding: 2px 0;
