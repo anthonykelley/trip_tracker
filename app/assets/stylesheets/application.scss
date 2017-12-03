@@ -93,11 +93,8 @@
   }
 }
 
-.flex-wrapper{
-  display: flex;
-  justify-content: space-between;
-  p{
-    display: flex;
-    justify-content: space-between;
-  }
+
+#flex-wrapper{
+  display:flex;
+  justify-content: space-evenly;
 }
