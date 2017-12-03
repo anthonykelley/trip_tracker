@@ -4,8 +4,9 @@
 <div class="ui container">
   <h1><%= @location.name %></h1>
 
-  <p>Country: <%= @location.country %></p>
-  <p>Address: <%= @location.address %></p>
+  <p><strong>Country:&thinsp;</strong> <%= @location.country %></p>
+  <p><strong>Address:&thinsp;</strong> <%= @location.address %></p>
+  <p><strong>Description:&thinsp;</strong> <%= @location.description %></p>
 
   <%= link_to "Back to All locations", locations_path(@location), class: "ui blue button" %>
   <%= link_to "Edit", edit_location_path(@location), class: "ui orange button" %>

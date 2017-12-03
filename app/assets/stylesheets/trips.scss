@@ -27,6 +27,10 @@
   padding-top: 15px;
 }
 
+.ui.cards > .local {
+    max-width: 22%;
+}
+
 //SHOW PAGE -- accedently named everything with location instead of trip(oops)
 
 #location-wrapper{
