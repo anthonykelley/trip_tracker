@@ -26,6 +26,9 @@
                 <div class="description">
                   <%= local.address %>
                 </div>
+                <div class="description">
+                  <%= local.description %>
+                </div>
               </div>
               <div class="extra content">
                 <%= link_to 'Add This Location', add_location_path(@trip, local), method: :patch, class: "ui basic green button" %>

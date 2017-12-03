@@ -25,6 +25,9 @@
               <div class="description">
                 <%= local.address %>
               </div>
+              <div class="description">
+                <strong>Description: </strong><%= local.description.truncate(65) %>
+              </div>
             </div>
             <div class="extra content">
               <%= link_to 'Remove This location', remove_location_path(@trip, local), method: :patch, class: "ui basic orange button" %>

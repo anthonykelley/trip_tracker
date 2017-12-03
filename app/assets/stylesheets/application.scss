@@ -1,4 +1,8 @@
 @import 'semantic-ui';
+body {
+    background-image: url("http://media4.onsugar.com/files/2014/02/17/838/n/1922441/f0bd144ded7b1bfd_shutterstock_89720368.jpg.xxxlarge_2x.jpg");
+    background-size: cover;
+}
 @import 'animate';
 @import 'locations';
 @import 'trips';
@@ -27,6 +31,9 @@
   .flash.success{
     background-color: #BBDEF0;
   }
+  .flash.notice{
+    background-color: #BBDEF0;
+  }
 }
 
 
@@ -38,6 +45,17 @@
     list-style-type: none;
 
   }
+}
+.backing{
+  background: rgba(10, 10, 10, 0.4);
+  border-radius: 15px;
+
+}
+.sign-back{
+  background: rgba(10, 10, 10, 0.4);
+  width: 25%;
+  border-radius: 15px;
+  margin: 0 auto;
 }
 
 .menu{

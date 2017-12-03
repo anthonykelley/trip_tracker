@@ -8,9 +8,10 @@ class TripsController < ApplicationController
 
   def show
     locations = @trip.locations
-    @hash = Gmaps4rails.build_markers(locations) do |user, marker|
-      marker.lat user.latitude
-      marker.lng user.longitude
+    @hash = Gmaps4rails.build_markers(locations) do |location, marker|
+      marker.lat location.latitude
+      marker.lng location.longitude
+      marker.infowindow location.description
     end
   end
 
