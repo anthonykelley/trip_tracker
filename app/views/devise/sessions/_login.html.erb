@@ -22,7 +22,7 @@
 
     <div class="actions two buttons">
       <%= f.submit "Log in", class: 'ui blue button' %>
-      <%= render "devise/shared/links" %>
+      <%= link_to "Sign up", new_registration_path(resource_name), class: 'ui green button' %>
     </div>
     <% end %>
 

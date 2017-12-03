@@ -1,11 +1,19 @@
 
-<div class="ui container">
+<div class="ui container" >
     <div class"ui grid">
-      <h1>Pick your location</h1>
-      <%= link_to "Back to Trips", trips_path, class: 'ui teal button' %>
-      <%= link_to "New location", new_location_path(@location), class: 'ui blue button' %>
 
-      <div class "sixteen wide computer column">
+
+      <div class="location-head">
+        <h1>Select from many locations OR make your own</h1>
+
+        <%= link_to "Back to Trips", trips_path, class: 'ui teal button' %>
+        <%= link_to "New location", new_location_path(@location), class: 'ui blue button' %>
+
+      </div>
+
+      <%= will_paginate  %>
+
+      <div id="location-index" class "sixteen wide computer column">
         <div class="ui cards">
           <% @locations.each do |local| %>
 
@@ -22,9 +30,6 @@
               <div class="description">
                 <%= local.address %>
               </div>
-              <div class="description">
-                <%= local.priority %>
-              </div>
             </div>
             <div class="extra content">
             </div>
@@ -32,5 +37,9 @@
           <% end %>
         </div>
       </div>
+
+      <%= will_paginate %>
+
+
     </div>
   </div>

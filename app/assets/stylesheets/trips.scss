@@ -1,3 +1,5 @@
+//INDEX PAGE
+
 #trip-show{
   margin-bottom: 65px;
   .ui.cards > .card, .ui.card{
@@ -23,4 +25,49 @@
 #trip-show{
   text-align: center;
   padding-top: 50px;
+}
+
+//SHOW PAGE -- accedently named everything with location instead of trip(oops)
+
+#location-wrapper{
+  padding-top: 80px;
+  h1{
+    font-size: 48px;
+    padding-bottom: 20px;
+  }
+}
+
+#map{
+  border: 2px solid black;
+}
+.all-locations{
+
+}
+
+#all-locations{
+  padding: 3% 0 9% 0 ;
+  h1{
+    text-align: center;
+    padding-top: 20px;
+  }
+  .location-buttons{
+    padding-bottom: 10px;
+    text-align: center;
+  }
+}
+
+.flex-wrapper{
+  font-size: 17px;
+  height: 250px;
+  display: flex;
+  padding: 5%;
+  background: rgba(220,220,230, 0.5);
+  border-radius: 15px;
+  #trip-name{
+    font-size: 22px;
+    padding: 2px 0;
+  }
+  .trip-buttons{
+    align-self: flex-end;
+  }
 }

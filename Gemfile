@@ -6,13 +6,15 @@ gem 'puma', '~> 3.7'
 gem 'semantic-ui-sass'
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
-gem 'turbolinks', '~> 5'
 gem 'faker', '~> 1.8.4'
 gem 'will_paginate', '~> 3.1.0'
 gem 'coffee-script', '~> 2.4', '>= 2.4.1'
+gem 'turbolinks', '~> 5.0', '>= 5.0.1'
 gem 'animate.css-rails', '~> 3.2.0'
 gem 'jquery-rails'
 gem 'devise'
+gem 'gmaps4rails'
+gem 'geocoder'
 
 
 group :development, :test do

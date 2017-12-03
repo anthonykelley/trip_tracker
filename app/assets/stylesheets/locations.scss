@@ -1,1 +1,34 @@
+.location-head{
+  padding: 65px 0 20px 0;
+  text-align: center;
+}
+#location-index{
+  padding-bottom: 9%;
+}
 
+#location-main{
+  padding: 5% 0 9% 0;
+  text-align: center;
+  #center{
+    margin: 0 auto;
+  }
+  .pagination{
+    text-align: left;
+  }
+  h1{
+    text-align: center;
+  }
+  #but-contain{
+    max-width: 40%;
+    padding-bottom: 10px;
+  }
+  .locations-all{
+    padding: 2% 0 2% 0;
+  }
+  .content{
+    text-align: left;
+    a{
+      text-align: center;
+    }
+  }
+}

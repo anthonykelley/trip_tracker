@@ -7,6 +7,11 @@ class TripsController < ApplicationController
   end
 
   def show
+    locations = @trip.locations
+    @hash = Gmaps4rails.build_markers(locations) do |user, marker|
+      marker.lat user.latitude
+      marker.lng user.longitude
+    end
   end
 
   def new
@@ -42,7 +47,7 @@ class TripsController < ApplicationController
   #custom controllers for adding locations
 
   def find_location
-    @locations = Location.where('trip_id IS ?', nil)
+    @locations = Location.where('trip_id IS ?', nil).order(created_at: :desc).paginate(page: params[:page], per_page: 15)
   end
 
   def add_location

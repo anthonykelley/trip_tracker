@@ -3,7 +3,7 @@ class LocationsController < ApplicationController
   before_action :find_location, only: [:edit, :show, :update, :destroy ]
 
   def index
-    @locations = Location.all
+    @locations = Location.all.order(created_at: :desc).paginate(page: params[:page], per_page: 15)
   end
 
   def show
@@ -48,6 +48,6 @@ class LocationsController < ApplicationController
     end
 
     def location_params
-      params.require(:location).permit(:address, :priority, :name, :country)
+      params.require(:location).permit(:address, :name, :country)
     end
 end

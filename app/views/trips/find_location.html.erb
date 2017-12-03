@@ -1,40 +1,42 @@
 
-<div class="ui container">
-    <div class"ui grid">
+<div id="location-main" class="ui container">
+    <div id="center" class"ui center aligned page grid ">
       <h1>Pick your location</h1>
-      <div class="ui two buttons">
+
+      <div id="but-contain" class="ui two buttons">
         <%= link_to "Back to Trips", trips_path, class: 'ui basic green button' %>
         <%= link_to "Create New location", new_location_path(@location), class: 'ui basic blue button' %>
-
       </div>
 
-      <div class "sixteen wide computer column">
-        <div class="ui cards">
-          <% @locations.each do |local| %>
+      <%= will_paginate @locations %>
+      <div class="locations-all">
+          <div class="ui cards">
+            <% @locations.each do |local| %>
 
 
-          <div class="card">
-            <div class="content">
-              <div class="header">
-                <%=link_to local.name, location_path(local) %>
-              </div>
+            <div class="card">
+              <div class="content">
+                <div class="header">
+                  <%=link_to local.name, location_path(local) %>
+                </div>
 
-              <div class="description">
-                <%= local.country %>
+                <div class="description">
+                  <%= local.country %>
+                </div>
+                <div class="description">
+                  <%= local.address %>
+                </div>
               </div>
-              <div class="description">
-                <%= local.address %>
-              </div>
-              <div class="description">
-                <%= local.priority %>
+              <div class="extra content">
+                <%= link_to 'Add This Location', add_location_path(@trip, local), method: :patch, class: "ui basic green button" %>
               </div>
             </div>
-            <div class="extra content">
-              <%= link_to 'Add This Location', add_location_path(@trip, local), method: :patch, class: "ui basic green button" %>
-            </div>
+            <% end %>
           </div>
-          <% end %>
-        </div>
+
       </div>
+
+      <%= will_paginate @locations %>
+
     </div>
   </div>

@@ -1,8 +1,12 @@
 <div class="ui top fixed menu teal header">
-  <div class="item">
-    <img src="/images/logo.png">
-  </div>
+
   <%= link_to 'Home', root_path, class: "item"%>
   <%= link_to 'Trips', trips_path, class: "item"%>
-  <%= link_to 'Logout', destroy_user_session_path, method: :delete,class: "item"%>
+  <% if user_signed_in? %>
+    <div class="right floated meta">
+      <%= link_to 'Logout', destroy_user_session_path, method: :delete,class: "item"%>
+    </div>
+  <% else %>
+    <%= link_to "Sign up", new_registration_path(resource_name), class: 'item' %>
+  <% end %>
 </div>

@@ -1,24 +1,32 @@
- <div class='ui container'>
-  <h1><%= @trip.name %> Trip</h1>
-    <p>
-      <strong>Name:</strong>
-      <%= @trip.name %>
-    </p>
-    <p>
-      <strong>Days:</strong>
-      <%= @trip.days %>
-    </p>
-    <p>
-      <strong>Season:</strong>
-      <%= @trip.season %>
-    </p>
-  <%= link_to 'Edit Trip', edit_trip_path(@trip) %>
-  <br />
-  <%= link_to 'Delete', trip_path(@trip), method: :delete, data: {confirm: 'Are you sure you would like to delete?'} %>
-  <br />
-  <%= link_to 'Add a location', find_location_path, class: "ui teal button" %>
-  <%= link_to "New location", new_location_path(@location) %>
+<%= render 'scripts' %>
+
+<div  class="ui container" id="location-wrapper">
+
+  <div class="ui grid">
+
+
+    <div class="sixteen wide column">
+      <h1><%= current_user.first_name %>'s <%= @trip.name %> Trip</h1>
+
+    </div>
+
+      <div class="eight wide column">
+        <%= render 'gmap' %>
+
+      </div>
+      <div class="eight wide column">
+        <%= render 'trip_info' %>
+
+      </div>
+
+
+  </div>
 
 </div>
 
-<%= render 'each_location' %>
+<div class="ui container">
+<div class="all-locations">
+
+</div>
+  <%= render 'each_location' %>
+</div>

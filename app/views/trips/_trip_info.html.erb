@@ -1,0 +1,28 @@
+<div class='ui container flex-wrapper'>
+  <p>
+    <strong>Your trip</strong>
+    <p id="trip-name">
+      <%= @trip.name %>
+
+    </p>
+  </p>
+  <p>
+    <strong>Duration:</strong>
+    <%= @trip.days %> Days
+  </p>
+  <p>
+    <strong>Season:</strong>
+    <%= @trip.season %>
+  </p>
+
+  <div class="trip-buttons">
+    <%= link_to 'Edit Trip', edit_trip_path(@trip), class: "ui orange button" %>
+    <%= link_to 'Delete', trip_path(@trip), method: :delete,
+    data: {confirm: 'Are you sure you would like to delete?'},
+    class: "ui red button" %>
+
+  </div>
+  <br />
+
+
+</div>

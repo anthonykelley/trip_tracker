@@ -12,5 +12,8 @@
 //
 //= require rails-ujs
 //= require jquery
+//= require turbolinks
 //= require semantic-ui
+//= require underscore
+//= require gmaps/google
 //= require_tree .
