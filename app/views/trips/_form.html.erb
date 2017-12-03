@@ -13,8 +13,10 @@
   <%= f.label :name %>
   <%= f.text_field :name, required: true %>
   <%= f.label :days %>
-  <%= f.text_field :days, required: true %>
+  <%= f.number_field :days, required: true %>
   <%= f.label :season %>
   <%= f.select :season, ['Summer', 'Autumn', 'Winter', 'Spring'], required: true %>
+  <%= f.label :description %>
+  <%= f.text_area :description%>
   <%= f.submit %>
 <% end %>

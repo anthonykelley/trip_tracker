@@ -3,7 +3,7 @@ class TripsController < ApplicationController
                                   :find_location, :add_location, :remove_from_trip]
 
   def index
-    @trip = current_user.trips
+    @trip = current_user.trips.order(created_at: :desc)
   end
 
   def show
@@ -73,7 +73,7 @@ class TripsController < ApplicationController
 
   private
     def trip_params
-      params.require(:trip).permit(:name, :days, :season)
+      params.require(:trip).permit(:name, :days, :season, :description)
     end
 
     def set_trip

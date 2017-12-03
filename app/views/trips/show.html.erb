@@ -29,6 +29,17 @@
 <div class="ui container">
 <div class="all-locations">
 
-</div>
-  <%= render 'each_location' %>
+<div id="all-locations" class="ui container">
+  <div class"ui grid">
+    <h1>Places to Visit</h1>
+    <div class="location-buttons">
+      <%= link_to 'Add a location', find_location_path, class: "ui teal button" %>
+      <%= link_to "New location", new_location_path(@location), class: "ui green button"%>
+    </div>
+    <% if @trip.locations.any? %>
+      <%= render 'each_location' %>
+    <% else %>
+      <h3>Add a trip!</h3>
+    <% end %>
+  </div>
 </div>

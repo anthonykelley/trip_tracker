@@ -1,7 +1,7 @@
 
 
 #locations
-17.times do |n|
+9.times do |n|
   name = Faker::TwinPeaks.location
   country = Faker::Address.country
   address = Faker::Address.street_address
