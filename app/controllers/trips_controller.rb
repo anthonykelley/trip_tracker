@@ -24,6 +24,7 @@ class TripsController < ApplicationController
   def create
     @trip = current_user.trips.create(trip_params)
     if @trip.save
+      flash[:success] = "You Successfully Created A Trip!"
       redirect_to trips_path
     else
       render :new
@@ -33,6 +34,8 @@ class TripsController < ApplicationController
   def update
     @trip = current_user.trips.find(params[:id])
     if @trip.update(trip_params)
+      flash[:success] = "You updated your trip!"
+
       redirect_to trip_path(@trip)
     else
       render :edit
@@ -41,6 +44,8 @@ class TripsController < ApplicationController
 
   def destroy
     current_user.trips.find(params[:id]).destroy
+    flash[:success] = "Trip successfully removed!"
+
     redirect_to trips_path
   end
 
@@ -53,6 +58,8 @@ class TripsController < ApplicationController
   def add_location
     @location = Location.find(params[:format])
     @location.update(trip_id: params[:id])
+    flash[:success] = "Location Added!"
+
     redirect_to trip_path(@trip)
   end
 
@@ -60,6 +67,7 @@ class TripsController < ApplicationController
     @location = Location.find(params[:trip_id])
     @location.update(trip_id: nil)
     redirect_to trip_path(@trip)
+    flash[:alert] = "Location Removed!"
   end
 
   private

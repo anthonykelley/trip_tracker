@@ -1,3 +1,4 @@
+<%= render '/shared/flash' %>
 
 <div class="ui container" >
     <div class"ui grid">
@@ -18,7 +19,7 @@
           <% @locations.each do |local| %>
 
 
-          <div class="card">
+          <div class="card local">
             <div class="content">
               <div class="header">
                 <%=link_to local.name, location_path(local) %>

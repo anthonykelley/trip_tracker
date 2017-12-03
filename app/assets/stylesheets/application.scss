@@ -3,6 +3,34 @@
 @import 'locations';
 @import 'trips';
 
+//FLASH MESSAGES
+.flash-messages{
+  // position: fixed;
+  padding-top: 66px;
+  display: flex;
+  .flash{
+    margin: 0 auto;
+    width: 50%;
+    height: 50px;
+    text-align: center;
+    font-size: 18px;
+    border-radius: 15px;
+    p{
+      align-self: center;
+
+    }
+  }
+  .flash.alert{
+    background-color: #F49F0A;
+    color: white;
+  }
+  .flash.success{
+    background-color: #BBDEF0;
+  }
+}
+
+
+
 #error_explanation{
   background: rgba(130, 130, 130, 0.5);
   color: rgb(190, 10, 10);

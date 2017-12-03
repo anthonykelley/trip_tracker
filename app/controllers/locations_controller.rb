@@ -19,6 +19,8 @@ class LocationsController < ApplicationController
   def create
     @location = Location.new(location_params)
     if @location.save
+      flash[:success] = "You added a location!"
+
       redirect_to locations_path
     else
       render :new
@@ -27,6 +29,8 @@ class LocationsController < ApplicationController
 
   def update
     if @location.update(location_params)
+      flash[:success] = "Location Updated!"
+
       redirect_to locations_path
     else
       render :edit
@@ -35,6 +39,8 @@ class LocationsController < ApplicationController
 
   def destroy
     @location.destroy
+    flash[:success] = "Location removed!"
+
     redirect_to locations_path
   end
 
