@@ -1,13 +1,5 @@
 <div class='ui container'>
   <h1>Editing: <%= @trip.name%></h1>
 
-  <%= form_for @trip do |f| %>
-    <%= f.label :name %>
-    <%= f.text_field :name, required: true %>
-    <%= f.label :days %>
-    <%= f.text_field :days, required: true %>
-    <%= f.label :season %>
-    <%= f.text_field :season, required: true %>
-    <%= f.submit %>
-  <% end %>
+  <%= render 'form' %>
 </div>

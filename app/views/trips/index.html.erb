@@ -23,14 +23,14 @@
         <% if @trip.any? %>
         <% @trip.each do |trip| %>
         <div class="ui card">
-          <div class="content">
-            <div class="right floated meta"><%= trip.days %></div>
+          <div class="content card-top">
+            <div class="right floated meta"><%= trip.days %> Days</div>
             <%= link_to trip.name, trip_path(trip) %>
           </div>
           <div class="image">
-            <img>
+            <%= image_tag 'index_image.jpg' %>
           </div>
-          <div class="content">
+          <div class="content card-bottom">
             <span class="right floated">
               <i class="heart outline like icon"></i>
               17 likes
