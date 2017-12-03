@@ -1,4 +1,9 @@
-<div class="ui container">
+<div class="ui container center">
+  <div class="ui medium form">
+    <div class="three fields">
+    <div class="field">
+      <div class="ui inverted segment">
+  <div class="ui inverted form">
 
   <%= form_for @location, class: "ui form" do |f| %>
 
@@ -17,7 +22,12 @@
     <%= f.text_field :address, required: true%>
   </div>
 
+  <br>
+
+
+
   <%= f.submit class: "ui blue button" %>
+
 
   <% end %>
 </div>
