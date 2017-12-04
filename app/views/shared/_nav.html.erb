@@ -1,12 +1,12 @@
-<div class="ui top fixed menu teal header">
+<div class="ui top fixed menu header">
 
-  
+
 
   <%= link_to 'Home', root_path, class: "item"%>
   <%= link_to 'Trips', trips_path, class: "item"%>
   <%= link_to 'Locations', locations_path, class: "item"%>
   <% if user_signed_in? %>
-    <div class="right floated meta">
+    <div>
       <%= link_to 'Logout', destroy_user_session_path, method: :delete,class: "item"%>
     </div>
   <% else %>

@@ -60,15 +60,14 @@ class TripsController < ApplicationController
     @location = Location.find(params[:format])
     @location.update(trip_id: params[:id])
     flash[:success] = "Location Added!"
-
     redirect_to trip_path(@trip)
   end
 
   def remove_from_trip
     @location = Location.find(params[:trip_id])
     @location.update(trip_id: nil)
-    redirect_to trip_path(@trip)
     flash[:alert] = "Location Removed!"
+    redirect_to trip_path(@trip)
   end
 
   private

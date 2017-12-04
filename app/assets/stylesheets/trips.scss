@@ -1,6 +1,7 @@
 //INDEX PAGE
 
 #trip-show{
+
   margin-bottom: 65px;
   .ui.cards > .card, .ui.card{
     height: 275px;
@@ -38,25 +39,34 @@
   h1{
     font-size: 48px;
     padding-bottom: 20px;
+    color: white;
   }
 }
 
 #map{
   border: 2px solid black;
 }
-.all-locations{
 
-}
 
 #all-locations{
   padding: 3% 0 9% 0 ;
   h1{
     text-align: center;
     padding-top: 20px;
+    color: white;
   }
   .location-buttons{
     padding-bottom: 10px;
     text-align: center;
+  }
+  h3{
+    color: white;
+    text-align: center;
+    font-size: 22px;
+    background: rgba(40, 40, 40, 0.7);
+    border-radius: 15px;
+    width: 50%;
+    margin: 0 auto;
   }
 }
 
