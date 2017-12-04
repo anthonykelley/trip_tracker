@@ -4,8 +4,8 @@
       <h1>Pick your location</h1>
 
       <div id="but-contain" class="ui two buttons">
-        <%= link_to "Back to Trips", trips_path, class: 'ui basic green button' %>
-        <%= link_to "Create New location", new_location_path(@location), class: 'ui basic blue button' %>
+        <%= link_to "Back to Trips", trips_path, class: 'ui green button' %>
+        <%= link_to "Create New location", new_location_path(@location), class: 'ui purple blue button' %>
       </div>
 
       <%= will_paginate @locations %>
