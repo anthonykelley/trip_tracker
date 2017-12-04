@@ -1,4 +1,3 @@
-<div  style="margin: 0 auto;">
      <h1 class="ui center aligned icon header">Add A Trip</h1>
      <div class="ui form">
 
@@ -9,32 +8,18 @@
      <br>
      <br>
 
-<<<<<<< HEAD
+<div id="form-model">
 <%= form_for @trip do |f| %>
   <%= f.label :name %>
-  <%= f.text_field :name, required: true %>
+  <%= f.text_field :name, placeholder: 'Name your trip', required: true %>
   <%= f.label :days %>
-  <%= f.number_field :days, required: true %>
+  <%= f.number_field :days, required: true, placeholder: '?' %>
   <%= f.label :season %>
   <%= f.select :season, ['Summer', 'Autumn', 'Winter', 'Spring'], required: true %>
   <%= f.label :description %>
-  <%= f.text_area :description%>
-  <%= f.submit %>
+  <%= f.text_area :description, placeholder: 'Add a description'%>
+  <%= f.submit class: "ui green button" %>
 <% end %>
-=======
-
- <%= form_for @trip do |f| %>
-   <%= f.label :name %>
-   <%= f.text_field :name, required: true %>
-   <%= f.label :days %>
-   <%= f.text_field :days, required: true %>
-   <%= f.label :season %>
-   <%= f.select :season, ['Summer', 'Autumn', 'Winter', 'Spring'], required: true %>
-   <br>
-
-   <%= f.submit %>
- <% end %>
 
      </div>
 </div>
->>>>>>> css2
