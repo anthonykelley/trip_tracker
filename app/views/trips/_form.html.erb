@@ -1,14 +1,15 @@
-<div class="margin: 0 auto ">
-  <div class="ui medium form">
-    <div class="three fields">
-    <div class="field">
-      <div class="ui inverted segment">
-  <div class="ui inverted form">
+<div  style="margin: 0 auto;">
+     <h1 class="ui center aligned icon header">Add A Trip</h1>
+     <div class="ui form">
 
-    <br>
-    <br>
+       <h2 class="ui center aligned icon header">
+ <i class="globe icon"></i>
+ </h2>
 
+     <br>
+     <br>
 
+<<<<<<< HEAD
 <%= form_for @trip do |f| %>
   <%= f.label :name %>
   <%= f.text_field :name, required: true %>
@@ -20,3 +21,20 @@
   <%= f.text_area :description%>
   <%= f.submit %>
 <% end %>
+=======
+
+ <%= form_for @trip do |f| %>
+   <%= f.label :name %>
+   <%= f.text_field :name, required: true %>
+   <%= f.label :days %>
+   <%= f.text_field :days, required: true %>
+   <%= f.label :season %>
+   <%= f.select :season, ['Summer', 'Autumn', 'Winter', 'Spring'], required: true %>
+   <br>
+
+   <%= f.submit %>
+ <% end %>
+
+     </div>
+</div>
+>>>>>>> css2
